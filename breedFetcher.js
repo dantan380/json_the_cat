@@ -16,7 +16,6 @@ request(`https://api.thecatapi.com/v1/breeds/search?q=${args[0]}`, (error, respo
 
 const fetchBreedDescription = function(breedName, callback) {
   const url = `https://api.thecatapi.com/v1/breeds/search?q=${breedName}`;
-  console.log(url);
   request(url, (error, response, body) => {
     if (error) {
       callback(error, null);	//If there is an error, call the callback function and pass it the error.
